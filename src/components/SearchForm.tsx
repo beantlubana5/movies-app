@@ -2,9 +2,9 @@ import './SearchForm.css'
 
 const SearchForm = () => {
   return (
-    <div className='SearchForm'>
+    <form className='SearchForm'>
         SearchForm works
-    </div>
+    </form>
   )
 };
 

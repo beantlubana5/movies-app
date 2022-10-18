@@ -7,14 +7,14 @@ import {
   Navigate
 } from "react-router-dom";
 import './App.css';
-import Main from './components/Main';
+import MainPage from './components/MainPage';
 
 function App() {
   return (
     <div className="App">
     <Router>
       <Routes>
-          <Route path="/" element={<Main/>} />
+          <Route path="/" element={<MainPage/>} />
       </Routes>
     </Router>
     </div>
