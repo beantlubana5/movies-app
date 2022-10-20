@@ -14,10 +14,10 @@ const MovieDetail = () => {
       setMovieDetail(response);
     });
   }, [id]);
-  return <div className="MovieDetails">MovieDetails works</div>;
+
   return (
     <div className="MovieDetails">
-      {movieDetail ? <Movie movieDetail={movieDetail} /> : <p>Loading</p>}
+      {movieDetail ? <div> {movieDetail.budget} </div> : <p>Loading</p>}
     </div>
   );
 };
