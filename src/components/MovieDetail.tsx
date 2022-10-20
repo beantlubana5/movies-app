@@ -14,18 +14,9 @@ const MovieDetail = () => {
       setMovieDetail(response);
     });
   }, [id]);
-
   return (
     <div className="MovieDetails">
-      {movieDetail ? (
-        <div>
-          <h1>{movieDetail.title}</h1>
-          <p>{movieDetail.budget}</p>
-          <p>{movieDetail.overview}</p>
-        </div>
-      ) : (
-        <p>Loading</p>
-      )}
+      {movieDetail ? <div> {movieDetail.budget} </div> : <p>Loading</p>}
     </div>
   );
 };
