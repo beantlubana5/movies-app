@@ -1,7 +1,8 @@
 import axios from "axios";
+import MovieDetails from "../models/MovieDetails";
 import MovieResults from "../models/MovieResults";
 
-const key: string = process.env.REACT_APP_GIPHY_KEY || "";
+const key: string = process.env.REACT_APP_API_KEY || "";
 
 export const getTrendingMovies = (): Promise<MovieResults> => {
   return axios
@@ -13,19 +14,7 @@ export const getTrendingMovies = (): Promise<MovieResults> => {
     });
 };
 
-export const getGifsBySearchTerm = (
-  searchTerm: string
-): Promise<MovieResults> => {
-  return axios
-    .get("https://api.giphy.com/v1/gifs/search", {
-      params: { api_key: key, q: searchTerm },
-    })
-    .then((response) => {
-      return response.data;
-    });
-};
-
-export const getMovieDetailsById = (id: string): Promise<MovieResults> => {
+export const getMovieDetailsById = (id: string): Promise<MovieDetails> => {
   return axios
     .get(`https://api.themoviedb.org/3/movie/${encodeURIComponent(id)}`, {
       params: { api_key: key },
