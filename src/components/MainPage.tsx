@@ -13,7 +13,7 @@ const MainPage = () => {
     getTrendingMovies().then((response) => {
       setMovies(response.results);
     });
-  });
+  }, [movies]);
 
   return (
     <div className="MainPage">

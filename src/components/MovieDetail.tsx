@@ -7,16 +7,25 @@ import "./MovieDetail.css";
 
 const MovieDetail = () => {
   const id: string | undefined = useParams().id;
-  const [movieDetails, setMovieDetails] = useState<MovieDetails | null>(null);
+  const [movieDetail, setMovieDetail] = useState<MovieDetails | null>(null);
 
   useEffect(() => {
     getMovieDetailsById(id!).then((response) => {
-      setMovieDetails(response);
+      setMovieDetail(response);
     });
   }, [id]);
+
   return (
     <div className="MovieDetails">
-      {movieDetails ? <div> {movieDetails.budget} </div> : <p>Loading</p>}
+      {movieDetail ? (
+        <div>
+          <h1>{movieDetail.title}</h1>
+          <p>{movieDetail.budget}</p>
+          <p>{movieDetail.overview}</p>
+        </div>
+      ) : (
+        <p>Loading</p>
+      )}
     </div>
   );
 };

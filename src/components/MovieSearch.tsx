@@ -15,7 +15,11 @@ const MovieSearch = () => {
   return (
     <form className='MovieSearch' onSubmit={(e)=>handleSubmit(e)}>
         <label htmlFor="searchTerm">Search Term</label>
-        <input type="text" />
+        <input type="text"
+                name="searchTerm" 
+                id="searchTerm" 
+                value={searchTerm} 
+                onChange={(e) => setSearchTerm(e.target.value)}/>
         <button>Search</button>
     </form>
   )

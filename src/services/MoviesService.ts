@@ -14,6 +14,15 @@ export const getTrendingMovies = (): Promise<MovieResults> => {
     });
 };
 
+export const getMoviesBySearchterm = (searchTerm: string): Promise<MovieResults> => {
+    return axios
+    .get("https://api.themoviedb.org/3/search/company", 
+        {params: {api_key: key, query: searchTerm, page: 1},
+    })         
+    .then((response)=>{
+        return response.data;
+    })
+}
 export const getMovieDetailsById = (id: string): Promise<MovieDetails> => {
   return axios
     .get(`https://api.themoviedb.org/3/movie/${encodeURIComponent(id)}`, {
