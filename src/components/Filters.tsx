@@ -1,17 +1,11 @@
 import './Filters.css'
 
 const Filters = () => {
+  
+    const onChangeValue = () => {
 
-    const valueSelected = () => {
-        // Clear all filters
-
-        // FIll filter that was selected
-
-        // Apply filter to movie results
     }
-
     
-
   return (
     <div className='Filters'>
         <label htmlFor="">Genres</label>
@@ -22,17 +16,11 @@ const Filters = () => {
             <option value="Drama">Drama</option>
         </select>
         
-      {/*<div onChange={this.onChangeValue}>
-        <input type="radio" value="Male" name="gender" /> Male
-        <input type="radio" value="Female" name="gender" /> Female
-        <input type="radio" value="Other" name="gender" /> Other
+      <div onChange={onChangeValue}>
+        <input type="radio" value="Adult Only"                  name="gender" /> Adult Only
+        <input type="radio" value="English - Original Language" name="gender" /> English - Original Language
+        <input type="radio" value="At-least 8 Stars"            name="gender" /> At-least 8 Stars
       </div>
-         <label htmlFor="">Adult Only</label>
-        <input type="checkbox"/>
-        <label htmlFor="">English - Original Language</label>
-        <input type="checkbox" />
-        <label htmlFor="">At-least 8 Stars</label>
-        <input type="checkbox" /> */}
     </div>
   )
 };
