@@ -1,11 +1,21 @@
-import './MovieResults.css'
+import MovieLimitedInfo from "../models/MovieLimitedInfo";
+import Movie from "./Movie";
+import "./MovieResults.css";
 
-const MovieResults = () => {
+interface Props {
+  movies: MovieLimitedInfo[];
+}
+
+const MovieResults = ({ movies }: Props) => {
   return (
-    <div className='MovieResults'>
-        MovieResults works
+    <div className="MovieResults">
+      <ul>
+        {movies.map((movie) => (
+          <Movie movie={movie} key={movie.id} />
+        ))}
+      </ul>
     </div>
-  )
+  );
 };
 
 export default MovieResults;

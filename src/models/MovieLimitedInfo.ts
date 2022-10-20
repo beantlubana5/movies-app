@@ -6,4 +6,5 @@ export default interface MovieLimitedInfo {
   vote_average: number;
   media_type: string;
   original_language: string;
+  poster_path: string;
 }
