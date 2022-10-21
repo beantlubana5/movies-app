@@ -30,7 +30,7 @@ const MainPage = () => {
         setMovies(response.results);
       });
     }
-  });
+  }, [movies]);
 
   return (
     <div className="MainPage">

@@ -7,4 +7,5 @@ export default interface MovieLimitedInfo {
   media_type: string;
   original_language: string;
   poster_path: string;
+  inWatchlist: boolean;
 }

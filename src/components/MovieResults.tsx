@@ -9,7 +9,7 @@ interface Props {
   starFilter: boolean;
 }
 
-const MovieResults = ({ movies, adultOnlyFilter, englishFilter, starFilter }: Props) => {
+const MovieResults = ({ movies, adultOnlyFilter, englishFilter, starFilter}: Props) => {
   return (
     <div className="MovieResults">
       <ul>
